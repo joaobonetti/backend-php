@@ -1,9 +1,12 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+// require_once __DIR__ . '/vendor/autoload.php';
 
-use Moovin\Job\Backend;
+require_once ('src/Session.php');
 
-$exemplo = new Backend\Exemplo;
+// use Moovin\Job\Backend;
+// use Config\Config;
+// use Src\Session;
 
-echo $exemplo->exemplo();
+$session = new Session;
+$details = $session->startSession();

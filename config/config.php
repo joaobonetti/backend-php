@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+// namespace Config;
 
 const BANK_ACCOUNT = [
     [

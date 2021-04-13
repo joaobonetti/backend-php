@@ -10,7 +10,7 @@ namespace Moovin\Job\Backend;
 class Exemplo
 {
     /**
-     * Método de exemplo
+     * M?todo de exemplo
      *
      * @return string
      */
