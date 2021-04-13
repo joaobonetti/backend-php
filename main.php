@@ -10,3 +10,4 @@ require_once ('src/Session.php');
 
 $session = new Session;
 $details = $session->startSession();
+print_r($details);
