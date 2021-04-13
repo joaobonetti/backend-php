@@ -1,5 +1,7 @@
 <?php
 
+namespace Config;
+
 const BANK_ACCOUNT = [
     [
         'account' => 123456,
