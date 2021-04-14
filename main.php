@@ -23,10 +23,8 @@ echo "Sessão iniciada com conta de número " . $count . " do tipo " . $type . "
 $operations = new Operations;
 $balance = $operations->deposit($balance, 500.78);
 
-echo " Saldo atual é de " . $balance . "\n \n";
-
 $balance = $operations->withdraw($balance, 780.00, $type);
 
-echo " Saldo atual é de " . $balance . "\n \n";
+$operations->transfer($count, $balance, array_rand(BANK_ACCOUNT), 1500);
 
-$arrayBalances = $operations->transfer($count, $balance, array_rand(BANK_ACCOUNT), 1500);
+echo " Sessão finalizada";
