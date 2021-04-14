@@ -12,7 +12,7 @@ require_once ('src/Operations.php');
 $session = new Session;
 $count = $session->startSession();
 // print_r($count);
-$details = BANK_ACCOUNT['113789'];
+$details = BANK_ACCOUNT[$count];
 
 foreach ($details as $key => $value) {
     $$key = $value;
@@ -25,6 +25,6 @@ $balance = $operations->deposit($balance, 500.78);
 
 $balance = $operations->withdraw($balance, 780.00, $type);
 
-$operations->transfer($count, $balance, array_rand(BANK_ACCOUNT), 1500);
+$operations->transfer($count, $balance, array_rand(BANK_ACCOUNT), 1);
 
 echo " Sessão finalizada";

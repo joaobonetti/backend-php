@@ -32,8 +32,8 @@ class Operations
         } else {
             $balanceFrom -= $value;
             $balanceTo = BANK_ACCOUNT[$to]['balance'];
-            $balanceTo =+ $value;
-            echo "Foram transferidos B$" . $value . " da conta " . $from . " para a conta " . $to; ". O novo saldo da conta origem é de B$" . $balanceFrom . ". O novo saldo da conta destino é de B$" . $balanceTo . ".\n \n ";
+            $balanceTo += $value;
+            echo "Foram transferidos B$" . $value . " da conta " . $from . " para a conta " . $to . ". O novo saldo da conta origem é de B$" . $balanceFrom . ". O novo saldo da conta destino é de B$" . $balanceTo . ".\n \n ";
         }
     }
 }
