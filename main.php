@@ -4,7 +4,6 @@
 
 require_once ('src/Session.php');
 require_once ('src/Operations.php');
-require_once ('src/Functions.php');
 
 // use Moovin\Job\Backend;
 // use Config\Config;
