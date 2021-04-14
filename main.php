@@ -13,7 +13,6 @@ $session = new Session;
 $count = $session->startSession();
 // print_r($count);
 $details = BANK_ACCOUNT[$count];
-print_r($details);
 
 foreach ($details as $key => $value) {
     $$key = $value;
@@ -22,7 +21,6 @@ foreach ($details as $key => $value) {
 echo "Sessão iniciada com conta de número " . $count . " do tipo " . $type . " com B$" . $balance . " de saldo \n";
 
 $operations = new Operations;
-$teste = $operations->deposit($count, 500.78);
-print_r($teste);
+$balance = $operations->deposit($balance, 500.78);
 
-// print_r($details);
+echo "Novo saldo de " . $balance . "\n";
