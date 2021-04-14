@@ -4,6 +4,7 @@
 
 require_once ('src/Session.php');
 require_once ('src/Operations.php');
+require_once ('src/Functions.php');
 
 // use Moovin\Job\Backend;
 // use Config\Config;
@@ -12,6 +13,8 @@ require_once ('src/Operations.php');
 $session = new Session;
 $count = $session->startSession();
 // print_r($count);
+$details = BANK_ACCOUNT[$count];
+print_r($details);
 
 echo "Sessão iniciada com conta de número: " . $count . "\n";
 
