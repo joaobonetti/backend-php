@@ -11,13 +11,15 @@ class Operations
     public function withdraw($balance, $valueWithdraw, $typeAccount){
         $discount = ($typeAccount == 'CC') ? 2.50 : 0.80;
         $limit = ($typeAccount == 'CC') ? 600 : 1000;
-        if($balance >= ($valueWithdraw + $discount) && $valueWithdraw <= $limit) {
-            $balance -= $valueWithdraw - $discount;
+        if($balance < ($valueWithdraw + $discount)){
+            echo "Não existe saldo suficiente para a operação \n \n";
+            return;
+        } else if($valueWithdraw > $limit) {
+            echo "O valor de saque excede o limite de saque por acesso \n \n";
+            return;
+        } else {
+            $balance -= ($valueWithdraw + $discount);
             echo "Foram sacados B$" .  number_format($valueWithdraw, 2, ',', '.') . " da conta. A taxa de operação é de: B$" . number_format($discount, 2, ',', '.') . ". Saldo atual é de B$" . number_format($balance, 2, ',', '.') . "\n \n";
-            return $balance;
-        }
-        else {
-            echo "Não existe saldo suficiente para a operação ou o valor de saque excede o limite de saque por acesso. \n \n";
             return $balance;
         }
     }
