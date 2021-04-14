@@ -15,7 +15,11 @@ $count = $session->startSession();
 $details = BANK_ACCOUNT[$count];
 print_r($details);
 
-echo "Sessão iniciada com conta de número: " . $count . "\n";
+foreach ($details as $key => $value) {
+    $$key = $value;
+}
+
+echo "Sessão iniciada com conta de número " . $count . " do tipo " . $type . " com B$" . $balance . " de saldo \n";
 
 $operations = new Operations;
 $teste = $operations->deposit($count, 500.78);
