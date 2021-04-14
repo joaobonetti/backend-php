@@ -18,7 +18,7 @@ class Operations
         $discount = ($typeAccount == 'CC') ? 2.50 : 0.80;
         $limit = ($typeAccount == 'CC') ? 600 : 1000;
         if($balance < ($valueWithdraw + $discount)){
-            echo "Não existe saldo suficiente para a operação \n \n";
+            echo "Não existe saldo suficiente para a operação. Saldo em conta: B$" . number_format($balance, 2, ',', '.') . ". O valor de transferência é de B$" . number_format($valueWithdraw, 2, ',', '.') . " e a taxa de operação para esse tipo de conta é de B$" . number_format($discount, 2, ',', '.') . " \n \n";
             return;
         } else if($valueWithdraw > $limit) {
             echo "O valor de saque excede o limite de saque por acesso \n \n";
