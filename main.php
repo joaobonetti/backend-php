@@ -18,9 +18,13 @@ foreach ($details as $key => $value) {
     $$key = $value;
 }
 
-echo "Sessão iniciada com conta de número " . $count . " do tipo " . $type . " com B$" . $balance . " de saldo \n";
+echo "Sessão iniciada com conta de número " . $count . " do tipo " . $type . " com B$" . $balance . " de saldo \n \n";
 
 $operations = new Operations;
 $balance = $operations->deposit($balance, 500.78);
 
-echo "Novo saldo de " . $balance . "\n";
+echo " Saldo atual é de " . $balance . "\n \n";
+
+$balance = $operations->withdraw($balance, 780.00, $type);
+
+echo " Saldo atual é de " . $balance . "\n \n";
