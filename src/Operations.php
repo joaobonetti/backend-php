@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Classe de operações
+ *
+ * @author João Bonetti <joaopaulodalmeida2@gmail.com>
+ */
+
 class Operations
 {
     public function deposit($balance, $valueDeposit){
