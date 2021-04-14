@@ -12,6 +12,6 @@ require_once('config/Config.php');
 
      public function startSession()
      {
-        return BANK_ACCOUNT[rand(0, 5)];
+        return array_rand(BANK_ACCOUNT, 1);
      }
  }
