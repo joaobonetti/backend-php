@@ -13,8 +13,10 @@ $session = new Session;
 $count = $session->startSession();
 // print_r($count);
 
-echo "Sessão iniciada com conta de número: " . $count;
+echo "Sessão iniciada com conta de número: " . $count . "\n";
 
-// $operations = new Operations;
-// $details['balance'] = $operations->deposit($details['balance'], 500.78);
+$operations = new Operations;
+$teste = $operations->deposit($count, 500.78);
+print_r($teste);
+
 // print_r($details);

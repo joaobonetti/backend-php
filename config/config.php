@@ -3,7 +3,6 @@
 // namespace Config;
 
 const BANK_ACCOUNT = [
-
     123456 => [
         'type' => 'CC',
         'balance' => 5584.58
