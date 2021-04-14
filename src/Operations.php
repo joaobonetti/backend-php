@@ -3,16 +3,18 @@
 class Operations
 {
     public function deposit($balance, $valueDeposit){
-        echo "Foram depositados B$" . $valueDeposit . "na conta. Saldo atual é de " . $balance . "\n \n";
-        return $balance + $valueDeposit;
+        $balance += $valueDeposit;
+        echo "Foram depositados B$" . $valueDeposit . " na conta. Saldo atual é de " . $balance . "\n \n";
+        return $balance;
     }
     
     public function withdraw($balance, $valueWithdraw, $typeAccount){
         $discount = ($typeAccount == 'CC') ? 2.50 : 0.80;
         $limit = ($typeAccount == 'CC') ? 600 : 1000;
         if($balance >= ($valueWithdraw + $discount) && $valueWithdraw <= $limit) {
+            $balance -= $valueWithdraw - $discount;
             echo "Foram sacados B$" . $valueWithdraw . " da conta. A taxa de operação é de: B$" . $discount . ". Saldo atual é de " . $balance . "\n \n";
-            return $balance - $valueWithdraw - $discount;
+            return $balance;
         }
         else {
             echo "Não existe saldo suficiente para a operação ou o valor de saque excede o limite de saque por acesso. \n \n";

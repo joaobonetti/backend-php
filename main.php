@@ -12,7 +12,7 @@ require_once ('src/Operations.php');
 $session = new Session;
 $count = $session->startSession();
 // print_r($count);
-$details = BANK_ACCOUNT[$count];
+$details = BANK_ACCOUNT['113789'];
 
 foreach ($details as $key => $value) {
     $$key = $value;
