@@ -28,3 +28,5 @@ echo " Saldo atual é de " . $balance . "\n \n";
 $balance = $operations->withdraw($balance, 780.00, $type);
 
 echo " Saldo atual é de " . $balance . "\n \n";
+
+$arrayBalances = $operations->transfer($count, $balance, array_rand(BANK_ACCOUNT), 1500);
