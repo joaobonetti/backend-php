@@ -18,7 +18,8 @@ class Operations
     
     public function withdraw($balance, $valueWithdraw, $typeAccount){
         $discount = ($typeAccount == 'CC') ? 2.50 : 0.80;
-        $limit = ($typeAccount == 'CC') ? 600 : 1000;
+        $limit    = ($typeAccount == 'CC') ? 600  : 1000;
+
         if($balance < ($valueWithdraw + $discount)){
             echo "Não existe saldo suficiente para a operação. Saldo em conta: B$" . number_format($balance, 2, ',', '.') . ". O valor de transferência é de B$" . number_format($valueWithdraw, 2, ',', '.') . " e a taxa de operação para esse tipo de conta é de B$" . number_format($discount, 2, ',', '.') . " \n \n";
             return;
@@ -33,7 +34,7 @@ class Operations
     }
 
     public function transfer($from, $balanceFrom, $to, $value) {
-        if($from >= $to) {
+        if($from === $to) {
             echo "Não é possível transferir para a própria conta \n \n";
             return False;
         } else if($balanceFrom <= $value) {

@@ -3,7 +3,6 @@
 use Moovin\Job\Backend\Session;
 use Moovin\Job\Backend\Operations;
 
-
 require_once __DIR__ . '/vendor/autoload.php';
 
 $session = new Session;
