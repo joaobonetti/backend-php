@@ -1,5 +1,7 @@
 <?php
 
+namespace Moovin\Job\Backend;
+
 /**
  * Classe de operações
  *

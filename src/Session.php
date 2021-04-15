@@ -1,4 +1,7 @@
 <?php
+
+namespace Moovin\Job\Backend;
+
 require_once('config/Config.php');
 
 /**

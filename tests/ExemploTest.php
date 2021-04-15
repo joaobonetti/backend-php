@@ -5,7 +5,7 @@ namespace Moovin\Job\Backend\Tests;
 use Moovin\Job\Backend;
 
 /**
- * Teste unit·rio da classe Moovin\Job\Backend\Exemplo
+ * Teste unit√°rio da classe Moovin\Job\Backend\Exemplo
  */
 class ExemploTest extends \PHPUnit_Framework_TestCase
 {

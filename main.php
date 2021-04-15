@@ -1,9 +1,10 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+use Moovin\Job\Backend\Session;
+use Moovin\Job\Backend\Operations;
 
-require_once ('src/Session.php');
-require_once ('src/Operations.php');
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 $session = new Session;
 $count = $session->startSession();
