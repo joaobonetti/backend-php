@@ -9,9 +9,7 @@ $session = new Session;
 $count = $session->startSession();
 $details = BANK_ACCOUNT[$count];
 
-foreach ($details as $key => $value) {
-    $$key = $value;
-}
+extract($details);
 
 echo "\nSessão iniciada com conta de número " . $count . " do tipo " . $type . " com B$" . number_format($balance, 2, ',', '.') . " de saldo \n \n";
 
