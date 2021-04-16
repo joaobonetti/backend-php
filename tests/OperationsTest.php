@@ -20,13 +20,19 @@ class OperationsTest extends TestCase
     //     $this->assertSame(497.50, $operations->withdraw(1000, 500, 'CC'));
     // }
 
-    public function testWithdrawWithoutBalance()
+    // public function testWithdrawWithoutBalance()
+    // {
+    //     $operations = new Operations();
+ 
+    //     $this->assertSame(100, $operations->withdraw(100, 500, 'CC'));
+    // }
+
+    public function testWithdrawOnLimit()
     {
         $operations = new Operations();
  
-        $this->assertSame(100, $operations->withdraw(100, 500, 'CC'));
+        $this->assertSame(5000, $operations->withdraw(100, 500, 'CC'));
     }
-    
 
 
 
