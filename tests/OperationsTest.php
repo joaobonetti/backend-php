@@ -37,16 +37,23 @@ class OperationsTest extends TestCase
     //     $this->assertSame(100, $operations->withdraw(100, 601, 'CC'));
     // }
 
-    public function testTransferTrue()
+    // public function testTransferTrue()
+    // {
+    //     $operations = new Operations();
+
+    //     $arrayExpected = [
+    //         0 => 5534.0,
+    //         1 => 24565.27
+    //     ];
+ 
+    //     $this->assertSame($arrayExpected, $operations->transfer(123456, 5584.58, 987654, 50.58));
+    // }
+
+    public function testTransferSameAccount()
     {
         $operations = new Operations();
 
-        $arrayExpected = [
-            0 => 5534.0,
-            1 => 24565.27
-        ];
- 
-        $this->assertSame($arrayExpected, $operations->transfer(123456, 5584.58, 987654, 50.58));
+        $this->assertSame(False, $operations->transfer(147258, 5584.58, 147258, 50.58));
     }
 
 
