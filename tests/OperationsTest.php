@@ -56,6 +56,13 @@ class OperationsTest extends TestCase
         $this->assertSame(False, $operations->transfer(147258, 5584.58, 147258, 50.58));
     }
 
+    public function testTransferWithoutBalance()
+    {
+        $operations = new Operations();
+
+        $this->assertSame(False, $operations->transfer(348974, 7.87, 963852, 500.58));
+    }
+
 
 
 }
