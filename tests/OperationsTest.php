@@ -17,8 +17,9 @@ class OperationsTest extends TestCase
     {
         $operations = new Operations();
  
-        $this->assertSame(500.00, $operations->withdraw(1000.00, 500.00, 'CC'));
+        $this->assertSame(497.50, $operations->withdraw(1000, 500, 'CC'));
     }
+    
 
 
 
