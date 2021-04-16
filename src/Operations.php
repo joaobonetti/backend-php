@@ -22,10 +22,10 @@ class Operations
 
         if($balance < ($valueWithdraw + $discount)){
             echo "Não existe saldo suficiente para a operação. Saldo em conta: B$" . number_format($balance, 2, ',', '.') . ". O valor de transferência é de B$" . number_format($valueWithdraw, 2, ',', '.') . " e a taxa de operação para esse tipo de conta é de B$" . number_format($discount, 2, ',', '.') . " \n \n";
-            return;
+            return $balance;
         } else if($valueWithdraw > $limit) {
             echo "O valor de saque excede o limite de saque por acesso \n \n";
-            return;
+            return $balance;
         } else {
             $balance -= ($valueWithdraw + $discount);
             echo "Foram sacados B$" .  number_format($valueWithdraw, 2, ',', '.') . " da conta. A taxa de operação é de: B$" . number_format($discount, 2, ',', '.') . ". Saldo atual é de B$" . number_format($balance, 2, ',', '.') . "\n \n";
