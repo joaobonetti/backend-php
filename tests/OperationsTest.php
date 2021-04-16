@@ -2,6 +2,9 @@
 
 namespace Moovin\Job\Backend;
 
+require_once('config/Config.php');
+
+
 use \PHPUnit_Framework_TestCase as TestCase;
 
 class OperationsTest extends TestCase
@@ -27,11 +30,23 @@ class OperationsTest extends TestCase
     //     $this->assertSame(100, $operations->withdraw(100, 500, 'CC'));
     // }
 
-    public function testWithdrawOnLimit()
+    // public function testWithdrawOnLimit()
+    // {
+    //     $operations = new Operations();
+ 
+    //     $this->assertSame(100, $operations->withdraw(100, 601, 'CC'));
+    // }
+
+    public function testTransferTrue()
     {
         $operations = new Operations();
+
+        $arrayExpected = [
+            0 => 5534.0,
+            1 => 24565.27
+        ];
  
-        $this->assertSame(5000, $operations->withdraw(100, 500, 'CC'));
+        $this->assertSame($arrayExpected, $operations->transfer(123456, 5584.58, 987654, 50.58));
     }
 
 

@@ -45,6 +45,7 @@ class Operations
             $balanceTo = BANK_ACCOUNT[$to]['balance'];
             $balanceTo += $value;
             echo "Foram transferidos B$" . number_format($value, 2, ',', '.') . " da conta " . $from . " para a conta " . $to . ". O novo saldo da conta origem é de B$" . $balanceFrom . ". O novo saldo da conta destino é de B$" . number_format($balanceTo, 2, ',', '.') . ".\n \n ";
+            return [$balanceFrom, $balanceTo];
         }
     }
 }
