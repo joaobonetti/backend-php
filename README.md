@@ -1,28 +1,9 @@
 # Backend PHP <img src="https://www.moovin.com.br/assets/images/svg/logo2.svg" width="50">
 
-### Desafio
+### O Desafio
 
 Desenvolver uma solução para o desafio proposto com a utilização de orientação a objetos na linguagem PHP.
-
-### Como realizar
-
-Faça o fork do repositório, realize os seus commits e ao final envie o link do seu repositório para o e-mail rh@moovin.com.br. Este repositório já possui uma base para iniciar o desenvolvimento, utilize-a como achar necessário. 
-
-Para iniciar você deve instalar as dependências:
-```zsh
-  foo@bar:~$ composer install
-```
-Em seguida você poderá executar exemplos de utilização do sistema criado através do comando:
-```zsh
-  foo@bar:~$ php main.php
-```
-Também é possível optar por implementar testes de unidade, utilizando o comando abaixo para execução:
-```zsh
-  foo@bar:~$ ./vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml
-```
-
-### Instruções
-
+###
 Em um pequeno país do planeta Cyber, a moeda vigente é o biteris cuja sigla é B$.
 
 Você precisa desenvolver um algoritmo para um caixa eletrônico, seguindo os requisitos descritos abaixo:
@@ -45,5 +26,12 @@ Você precisa desenvolver um algoritmo para um caixa eletrônico, seguindo os re
 
 ### Dúvidas
 
-Em caso de dúvida entre em contato pelo skype **matheusmoovin**
+### README
 
+- É necessário instalar o composer e, posterior a isso, suas dependências;
+
+- Para a execução do projeto deve-se executar o arquivo main.php. Pode-se fazer através do comando: php main.php;
+
+- Para a execução dos arquivos de testes deve-se executar o comando: vendor/bin/phpunit;
+
+### Author: João Bonetti <joaopaulodalmeida2@gmail.com>
